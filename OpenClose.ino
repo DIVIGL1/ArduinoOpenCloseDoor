@@ -11,7 +11,8 @@ iarduino_RTC time(RTC_DS3231);          // подключаем RTC модуль
 #define PIN_GERCON_CLOSE 2    // Определяем пин, используемый для подключения геркона остановки ОПУСКАНИЯ
 #define DOOR_IS_OPEN 1        // Значение возвращаемое в случае если дверь ОТкрыта
 #define DOOR_IS_CLOSE 0       // Значение возвращаемое в случае если дверь ЗАкрыта
-#define TESTING_PROGRAMM true    // Значение возвращаемое в случае если дверь ЗАкрыта
+//#define TESTING_PROGRAMM true
+#define TESTING_PROGRAMM false
 
 //--------------- Блок инициализации ------------
 void setup() {
@@ -21,7 +22,7 @@ void setup() {
     delay(3000);
     Serial.begin(9600);
     time.begin();
-//    time.settime(0,28,12,04,8,19,4);  // 0  сек, 07 мин, 22 час, 8, октября, 2019 год, четверг
+//    time.settime(0,50,12,04,8,19,4);  // 0  сек, 07 мин, 22 час, 8, октября, 2019 год, четверг
 
     pinMode(PIN_RELAY_UP, OUTPUT);       // Объявляем пин реле как выход
     pinMode(PIN_RELAY_DOWN, OUTPUT);     // Объявляем пин реле как выход
